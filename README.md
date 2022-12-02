@@ -10,6 +10,6 @@ Work- Flow
 Steps to use the app
 Deploy the Contract of Voting
 Put the Address of deployed contract in Voting.Js file.
-
+Run the following two commands in VS Code terminal
 npm install
 npm start
