@@ -117,6 +117,76 @@ function Voting() {
 	return (
 		<div>
 			<div className="flex flex-row space-x-52 mt-10 ml-96">
+			<div>
+					<div className="mt-14 ">
+						<h3 className="text-2xl">Candidate Registration</h3>
+						<form onSubmit={handleCandidateRegistration}>
+							<div className="form-group mb-6">
+								<div className="mt-3"></div>
+								<div className="space-y-2">
+									<div>
+										<label>
+											Candidate ID
+											<select className="w-64 ml-2 rounded-full text-slate-900" value={CandidateID} onChange={handleCandidateID}>
+												<option name="BJP">1</option>
+												<option name="TRS">2</option>
+												<option name="CONGRESS">3</option>
+											</select>
+										</label>
+									</div>
+									<div>
+										<label>
+											Candidate Name
+											<span>
+												<input className="ml-2 rounded-full text-slate-900" value={CandidateName} onChange={handleCandidatename} />
+											</span>
+										</label>
+									</div>
+									<div>
+										<label>
+											Candidate age
+											<span>
+												<input className="ml-2 rounded-full text-slate-900" value={CandidateAge} onChange={handleCandidateAge} />
+											</span>
+										</label>
+									</div>
+								</div>
+								<input className="bg-blue-500 hover:bg-blue-900 text-white font-bold py-1 px-2 rounded-full mt-4" type="submit" value="Register" />
+							</div>
+						</form>
+					</div>
+					<div className="mt-14">
+						<h3 className="text-2xl">Voter Registration</h3>
+						<form onSubmit={handleVoterRegistration}>
+							<div>
+								<label>
+									VotedID
+									<span className="ml-2 mr-2 ">
+										<input className="rounded-full text-slate-900" value={VoterID} onChange={handleVoterID} />
+									</span>
+								</label>
+							</div>
+							<div className="mt-2">
+								<label>
+									Voter Name
+									<span className="ml-2 mr-2 ">
+										<input className="rounded-full text-slate-900" value={VoterName} onChange={handleVoterName} />
+									</span>
+								</label>
+							</div>
+							<div className="mt-2">
+								<label>
+									Voter Age
+									<span className="ml-2 mr-2 ">
+										<input className="rounded-full text-slate-900" value={VoterAge} onChange={handleVoterAge} />
+									</span>
+								</label>
+							</div>
+
+							<button className="bg-blue-500 hover:bg-blue-900 text-white font-bold py-1 px-2 rounded-full mt-2">Register</button>
+						</form>
+					</div>
+				</div>
 				<div>
 					<form onSubmit={handleVote}>
 						<p className="text-2xl">Vote</p>
@@ -226,76 +296,7 @@ function Voting() {
 					</div>
 				</div>
 				{/* =>>>>>>>........................................................................ */}
-				<div>
-					<div className="mt-14 ">
-						<h3 className="text-2xl">Candidate Registration</h3>
-						<form onSubmit={handleCandidateRegistration}>
-							<div className="form-group mb-6">
-								<div className="mt-3"></div>
-								<div className="space-y-2">
-									<div>
-										<label>
-											Candidate ID
-											<select className="w-64 ml-2 rounded-full text-slate-900" value={CandidateID} onChange={handleCandidateID}>
-												<option name="BJP">1</option>
-												<option name="TRS">2</option>
-												<option name="CONGRESS">3</option>
-											</select>
-										</label>
-									</div>
-									<div>
-										<label>
-											Candidate Name
-											<span>
-												<input className="ml-2 rounded-full text-slate-900" value={CandidateName} onChange={handleCandidatename} />
-											</span>
-										</label>
-									</div>
-									<div>
-										<label>
-											Candidate age
-											<span>
-												<input className="ml-2 rounded-full text-slate-900" value={CandidateAge} onChange={handleCandidateAge} />
-											</span>
-										</label>
-									</div>
-								</div>
-								<input className="bg-blue-500 hover:bg-blue-900 text-white font-bold py-1 px-2 rounded-full mt-4" type="submit" value="Register" />
-							</div>
-						</form>
-					</div>
-					<div className="mt-14">
-						<h3 className="text-2xl">Voter Registration</h3>
-						<form onSubmit={handleVoterRegistration}>
-							<div>
-								<label>
-									VotedID
-									<span className="ml-2 mr-2 ">
-										<input className="rounded-full text-slate-900" value={VoterID} onChange={handleVoterID} />
-									</span>
-								</label>
-							</div>
-							<div className="mt-2">
-								<label>
-									Voter Name
-									<span className="ml-2 mr-2 ">
-										<input className="rounded-full text-slate-900" value={VoterName} onChange={handleVoterName} />
-									</span>
-								</label>
-							</div>
-							<div className="mt-2">
-								<label>
-									Voter Age
-									<span className="ml-2 mr-2 ">
-										<input className="rounded-full text-slate-900" value={VoterAge} onChange={handleVoterAge} />
-									</span>
-								</label>
-							</div>
-
-							<button className="bg-blue-500 hover:bg-blue-900 text-white font-bold py-1 px-2 rounded-full mt-2">Register</button>
-						</form>
-					</div>
-				</div>
+				
 			</div>
 		</div>
 	);
